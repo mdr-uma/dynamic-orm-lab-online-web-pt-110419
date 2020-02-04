@@ -54,8 +54,8 @@ class InteractiveRecord
   end
 
   def self.find_by(hash)
-    sql = "SELECT * FROM #{self.table_name} WHERE options = ? "
-    DB[:conn].execute(sql, options)
+    sql = "SELECT * FROM #{self.table_name} WHERE hash = ? "
+    DB[:conn].execute(sql, hash)
   end
 
 end
